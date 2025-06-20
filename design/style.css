@@ -158,24 +158,62 @@ main {
 }
 .member {
   background: linear-gradient(135deg, #f8fafc 60%, #aabfa4 100%);
-  border: 2px solid var(--accent);
-  box-shadow: 0 6px 32px rgba(122,191,164,0.13);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(33,33,33,0.04);
+  padding: 1.5rem;
+  max-width: 340px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
   overflow: visible;
 }
+.member:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(33,33,33,0.12);
+}
 .member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid var(--main-green);
+  box-shadow: 0 4px 16px rgba(33,33,33,0.10);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.member h3 {
+  font-size: 1.2rem;
+  color: var(--main-green);
+  margin-bottom: 0.5rem;
+  font-family: 'Raleway', cursive, var(--font-main);
+  font-style: italic;
+}
+.member p {
+  font-size: 1rem;
+  color: var(--main-dark);
+}
+/* Style spécial pour Manon uniquement */
+.member.manon {
+  border: 2px solid var(--accent);
+  box-shadow: 0 6px 32px rgba(122,191,164,0.13);
+}
+.member.manon img {
   width: 140px;
   height: 140px;
   border: 5px solid var(--accent);
   box-shadow: 0 8px 32px rgba(122,191,164,0.18);
 }
-.member h3 {
+.member.manon h3 {
   color: var(--accent);
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.05em;
 }
-.member::before {
+.member.manon::before {
   content: "★ Junior Star";
   position: absolute;
   top: -18px;
@@ -189,14 +227,6 @@ main {
   font-weight: 700;
   letter-spacing: 0.08em;
   box-shadow: 0 2px 8px rgba(122,191,164,0.18);
-  display: none;
-}
-.member.manon::before {
-  display: block;
-}
-.member p {
-  font-size: 1rem;
-  color: var(--main-dark);
 }
 /* Style spécial pour Manon */
 .menber {
@@ -598,45 +628,51 @@ footer a { color: var(--main-green); text-decoration: underline; }
 }
 .member {
   background: linear-gradient(135deg, #f8fafc 60%, #aabfa4 100%);
-  border: 2px solid var(--accent);
-  box-shadow: 0 6px 32px rgba(122,191,164,0.13);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(33,33,33,0.04);
+  padding: 1.5rem;
+  max-width: 340px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
   overflow: visible;
 }
+.member:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(33,33,33,0.12);
+}
 .member img {
-  width: 140px;
-  height: 140px;
-  border: 5px solid var(--accent);
-  box-shadow: 0 8px 32px rgba(122,191,164,0.18);
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid var(--main-green);
+  box-shadow: 0 4px 16px rgba(33,33,33,0.10);
+  transition: border 0.2s, box-shadow 0.2s;
 }
 .member h3 {
-  color: var(--accent);
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-.member::before {
-  content: "★ Junior Star";
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--accent);
-  color: #fff;
-  padding: 0.3em 1em;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  box-shadow: 0 2px 8px rgba(122,191,164,0.18);
-  display: none;
-}
-.member.manon::before {
-  display: block;
+  font-size: 1.2rem;
+  color: var(--main-green);
+  margin-bottom: 0.5rem;
+  font-family: 'Raleway', cursive, var(--font-main);
+  font-style: italic;
 }
 .member p {
   font-size: 1rem;
   color: var(--main-dark);
+}
+
+/* Suppression des dégradés personnalisés pour Anaïs et Céline */
+.member.anais {
+  background: var(--main-grey);
+}
+.member.celine {
+  background: var(--main-grey);
 }
 
 /* Avis carousel */
