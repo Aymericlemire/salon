@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - Danohys</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design/style.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(120deg, #f8fafc 0%, #aabfa4 100%);
+    }
+    .login-container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(33,33,33,0.10);
+      padding: 2.5rem 2rem 2rem 2rem;
+      max-width: 350px;
+      width: 100%;
+      text-align: center;
+    }
+    .login-container h1 {
+      font-family: 'Raleway', sans-serif;
+      color: var(--main-green, #aabfa4);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      letter-spacing: 0.1em;
+    }
+    .login-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .login-container input {
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #f8fafc;
+      transition: border 0.2s;
+    }
+    .login-container input:focus {
+      border: 1.5px solid var(--main-green, #aabfa4);
+      outline: none;
+    }
+    .login-container button {
+      background: linear-gradient(90deg, var(--main-green, #aabfa4), var(--accent, #7d9174));
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.9rem 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 0.5rem;
+    }
+    .login-container button:hover {
+      background: var(--accent, #7d9174);
+      transform: scale(1.03);
+    }
+    .login-container .forgot {
+      display: block;
+      margin-top: 0.7rem;
+      color: var(--main-green, #aabfa4);
+      text-decoration: underline;
+      font-size: 0.98rem;
+      transition: color 0.2s;
+    }
+    .login-container .forgot:hover {
+      color: var(--accent, #7d9174);
+    }
+    .login-container .login-error {
+      color: #c0392b;
+      margin-top: 0.7rem;
+      font-size: 0.98rem;
+      min-height: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Connexion</h1>
+    <form id="login-form" autocomplete="off">
+      <input type="email" name="email" placeholder="Adresse email" required>
+      <input type="password" name="password" placeholder="Mot de passe" required>
+      <button type="submit">Se connecter</button>
+      <a href="#" class="forgot">Mot de passe oublié ?</a>
+      <div class="login-error" id="login-error"></div>
+    </form>
+  </div>
+  <script>
+    // Validation simple côté client (exemple)
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.email.value.trim();
+      const pass = this.password.value.trim();
+      const error = document.getElementById('login-error');
+      if (!email || !pass) {
+        error.textContent = 'Veuillez remplir tous les champs.';
+        return;
+      }
+      // Ici, tu peux ajouter la logique d'authentification (API, etc.)
+      error.textContent = '';
+      alert('Connexion réussie (démo) !');
+      // Redirige ou affiche le tableau de bord selon besoin
+    });
+  </script>
+</body>
+</html> 

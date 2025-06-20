@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danohys - Salon de Coiffure & Barbier - Mont-Saint-Aignan</title>
+    <meta name="description" content="Salon de coiffure mixte & barbier à Mont-Saint-Aignan. Découvrez nos services, notre équipe, nos réalisations et prenez rendez-vous en ligne !">
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design/style.css">
+  </head>
+
+  <body>
+
+    <!-- Bannière offre -->
+    <div class="offer">🎉 Première visite ? -20% sur votre prestation !</div>
+
+    <!-- Header sticky -->
+    <header id="header">
+      <div class="header-content">
+        <div class="logo"><img src="./img/logo.png" alt="Logo Danohys"></div>
+        <div>
+          <div class="salon-title">D A N O H Y S</div>
+          <div class="subtitle">ARTISAN COIFFEUR / BARBIER</div>
+        </div>
+        <div class="socials">
+          <a href="http://www.facebook.com/danohys" target="_blank"><img src="./img/facebook.png" alt="Facebook"></a>
+          <a href="https://instagram.com/danohys" target="_blank"><img src="./img/instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#hero" class="nav-link">Accueil</a></li>
+          <li><a href="#salon" class="nav-link">Le Salon</a></li>
+          <li><a href="#services" class="nav-link">Services & Tarifs</a></li>
+          <li><a href="#galerie" class="nav-link">Galerie</a></li>
+          <li><a href="#equipe" class="nav-link">L'équipe</a></li>
+          <li><a href="#avis" class="nav-link">Avis</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="login.html" class="nav-link">Connexion</a></li>
+          <li><a href="https://www.planity.com/danohys-artisan-coiffeur-76130-mont-saint-aignan" class="cta-link nav-link" target="_blank" rel="noopener">Prendre RDV</a></li>
+        </ul>
+        <div class="burger" id="burger-menu">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero" id="hero" data-animate>
+      <div class="hero-content">
+        <h1>Votre beauté, notre passion</h1>
+        <p>Salon de coiffure mixte & barbier à Mont-Saint-Aignan</p>
+        <a href="https://www.planity.com/danohys-artisan-coiffeur-76130-mont-saint-aignan" class="btn-hero" target="_blank" rel="noopener">Prendre rendez-vous</a>
+      </div>
+      <div class="hero-img">
+        <img src="./img/salon moderne .jpg" alt="Salon de coiffure moderne">
+      </div>
+    </section>
+
+    <!-- Présentation du salon -->
+    <section class="about" id="salon" data-animate>
+      <div class="about-text">
+        <h2>Un cocon de bien-être</h2>
+        <p>Découvrez un espace chaleureux dédié à la beauté et à la détente, pour femmes et hommes. Notre équipe passionnée vous accueille dans une ambiance conviviale et professionnelle, avec des produits naturels et des techniques innovantes.</p>
+      </div>
+      <div class="about-img">
+        <img src="./img/salon detente .webp" alt="Intérieur du salon">
+      </div>
+    </section>
+
+    <!-- Services & Tarifs -->
+    <section class="services" id="services" data-animate>
+      <h2>Nos services & tarifs</h2>
+      <div class="services-list">
+        <div class="service-card" data-animate>
+          <img src="./img/ciseaux.png" alt="Coupe">
+          <h3>Coupe & Brushing</h3>
+          <p>À partir de 35€</p>
+          <a href="#contact" class="btn-main">Prendre RDV</a>
+        </div>
+        <div class="service-card" data-animate>
+          <img src="./img/coloration.png" alt="Coloration">
+          <h3>Coloration</h3>
+          <p>À partir de 45€</p>
+          <a href="#contact" class="btn-main">Prendre RDV</a>
+        </div>
+        <div class="service-card" data-animate>
+          <img src="./img/barbier.png" alt="Barbier">
+          <h3>Barbier</h3>
+          <p>À partir de 25€</p>
+          <a href="#contact" class="btn-main">Prendre RDV</a>
+        </div>
+        <!-- Ajoute d'autres services -->
+      </div>
+    </section>
+
+    <!-- Galerie photos avec lightbox -->
+    <section class="galerie" id="galerie" data-animate>
+      <h2>Galerie</h2>
+      <div class="galerie-grid">
+        <img src="./img/galerie1.jpg" alt="Réalisation 1" class="lightbox-img">
+        <img src="./img/galerie2.jpg" alt="Réalisation 2" class="lightbox-img">
+        <img src="./img/galerie3.jpg" alt="Réalisation 3" class="lightbox-img">
+        <img src="./img/galerie4.jpg" alt="Réalisation 4" class="lightbox-img">
+        <!-- Ajoute d'autres images -->
+      </div>
+      <!-- Lightbox modal -->
+      <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-content" alt="Zoom photo">
+      </div>
+    </section>
+
+    <!-- Équipe -->
+    <section class="team-section" id="equipe" data-animate>
+      <h2>L'équipe</h2>
+      <div class="team">
+        <div class="member" data-animate>
+          <img src="./img/anais.avif" alt="Anaïs">
+          <h3>Anaïs / Manager</h3>
+          <p>Passionnée, créative, à l'écoute de vos envies.</p>
+        </div>
+        <div class="member" data-animate>
+          <img src="./img/celine.avif" alt="Céline">
+          <h3>Céline / Coiffeuse confirmée</h3>
+          <p>23 ans d'expérience, polyvalente et souriante.</p>
+        </div>
+        <div class="member manon" data-animate>
+          <img src="./img/manon.avif" alt="Manon">
+          <h3>Manon / Coiffeuse junior</h3>
+          <p>Dynamique, curieuse, passionnée par la coiffure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avis clients (carousel) -->
+    <section class="avis-section" id="avis" data-animate>
+      <h2>Avis clients</h2>
+      <div class="avis-carousel">
+        <div class="avis-slide active">
+          <p>"Manon est gentille et douce, je suis entièrement satisfaite de ma prestation avec elle !"</p>
+          <span>- Julie</span>
+        </div>
+        <div class="avis-slide">
+          <p>"Disponible, à l'écoute et de bon conseil. Salon moderne et déco très sympa. Je recommande à 100%"</p>
+          <span>- Alexandra</span>
+        </div>
+        <div class="avis-slide">
+          <p>"Anaïs est une passionnée et ça se voit. Son travail est délicat, elle prend le temps de faire les choses et en tant que client c'est appréciable."</p>
+          <span>- André</span>
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Partenaires -->
+    <section class="brands-section" data-animate>
+      <h2>Nos partenaires</h2>
+      <div class="brands">
+        <img src="./img/davines-sustainablebeauty-logo-1.png" alt="Davines">
+        <img src="./img/olaplex_PNG.png" alt="Olaplex">
+        <!-- Ajoute d'autres logos -->
+      </div>
+    </section>
+
+    <!-- Contact & plan -->
+    <section class="contact-section" id="contact" data-animate>
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit" class="btn-main">Envoyer</button>
+        <div class="form-message" id="form-message"></div>
+      </form>
+      <p>3bis place de l'église, 76130 Mont-Saint-Aignan</p>
+      <p>Tél : <a href="tel:0658888319">06 58 88 83 19</a></p>
+      <p>Email : <a href="mailto:danohysartisancoiffeur@gmail.com">danohysartisancoiffeur@gmail.com</a></p>
+      <iframe src="https://www.google.com/maps?q=3bis+place+de+l'église,+Mont-Saint-Aignan&output=embed" width="100%" height="200" style="border:0;border-radius:12px;margin-top:1rem;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-socials">
+        <a href="http://www.facebook.com/danohys" target="_blank"><img src="./img/facebook.png" alt="Facebook"></a>
+        <a href="https://instagram.com/danohys" target="_blank"><img src="./img/instagram.png" alt="Instagram"></a>
+      </div>
+      <p>&copy; 2024 Danohys. Tous droits réservés.</p>
+      <p class="mentions"><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </footer>
+
+    <script src="./script/burger.js"></script>
+    <script src="./script/avis-carousel.js"></script>
+    <script src="./script/scroll-animate.js"></script>
+    <script src="./script/lightbox.js"></script>
+    <script src="./script/contact.js"></script>
+    <script>
+      // Affiche la section Planity au clic sur le bouton Prendre RDV
+      window.addEventListener('DOMContentLoaded', function() {
+        function showPlanitySection(e) {
+          e.preventDefault();
+          const planity = document.getElementById('rdv');
+          if (planity && !planity.classList.contains('visible')) {
+            planity.classList.add('visible');
+            setTimeout(() => {
+              planity.scrollIntoView({ behavior: 'smooth' });
+            }, 100); // Laisse le temps à l'affichage
+          } else if (planity) {
+            planity.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+        document.querySelectorAll('a[href="#rdv"]').forEach(btn => {
+          btn.addEventListener('click', showPlanitySection);
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
