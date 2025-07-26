@@ -1,0 +1,23 @@
+{
+  "name": "coiffure-_-danohys-artisan-coiffeur-_-mont-saint-aignan_files",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aymericlemire/Coiffure-_-Danohys-artisan-coiffeur-_-Mont-Saint-Aignan_files.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aymericlemire/Coiffure-_-Danohys-artisan-coiffeur-_-Mont-Saint-Aignan_files/issues"
+  },
+  "homepage": "https://github.com/Aymericlemire/Coiffure-_-Danohys-artisan-coiffeur-_-Mont-Saint-Aignan_files#readme",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.0"
+  }
+}

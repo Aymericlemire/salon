@@ -86,6 +86,41 @@
   </style>
 </head>
 <body>
+
+    <!-- HEADER DANOHYS STYLE WIX -->
+    <header>
+      <div class="header-encadre">
+        <div class="header-socials">
+          <a href="#" title="Instagram"><img src="img/instagram.svg" alt="Instagram"></a>
+          <a href="#" title="Facebook"><img src="img/facebook.svg" alt="Facebook"></a>
+        </div>
+        <div>
+          <div class="salon-title">DANOHYS</div>
+          <div class="subtitle">ARTISAN COIFFEUR/BARBIER</div>
+          <div class="header-phone">06 58 88 83 19</div>
+        </div>
+      </div>
+      <nav id="main-nav">
+        <ul>
+            <li><a class="nav-link" href="index.html">La maison</a></li>
+            <li><a class="nav-link" href="#">Blog</a></li>
+            <li><a class="nav-link" href="index.html#equipe">L'équipe</a></li>
+            <li><a class="nav-link" href="#">Instagram</a></li>
+            <li><a class="nav-link" href="information-concernant-les-tarifs.html">Tarifs/Services</a></li>
+            <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+            <li><a class="nav-link" href="login.html">Mon compte</a></li>
+        </ul>
+        <div class="burger" id="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!-- FIN HEADER DANOHYS STYLE WIX -->
+
+    <main>
+        <section id="login-section">
   <div class="login-container">
     <h1>Connexion</h1>
     <form id="login-form" autocomplete="off">
@@ -96,22 +131,35 @@
       <div class="login-error" id="login-error"></div>
     </form>
   </div>
-  <script>
-    // Validation simple côté client (exemple)
-    document.getElementById('login-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = this.email.value.trim();
-      const pass = this.password.value.trim();
-      const error = document.getElementById('login-error');
-      if (!email || !pass) {
-        error.textContent = 'Veuillez remplir tous les champs.';
-        return;
-      }
-      // Ici, tu peux ajouter la logique d'authentification (API, etc.)
-      error.textContent = '';
-      alert('Connexion réussie (démo) !');
-      // Redirige ou affiche le tableau de bord selon besoin
-    });
-  </script>
+
+  <!-- Supabase CDN + Authentification -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script type="module">
+    const SUPABASE_URL = 'https://voqgffdqjtfthtqieeve.supabase.co'; // 🔁 Remplacez par votre URL Supabase
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZvcWdmZmRxanRmdGh0cWllZXZlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1MTQxMDAsImV4cCI6MjA2NjA5MDEwMH0.vK1qYt5bjh-1x23NSzf60o4wjpmPOYCmdBDYTBcz8iQ'; // 🔁 Remplacez par votre clé ANON
+
+  
+  const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  document.getElementById('login-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const email = this.email.value.trim();
+    const password = this.password.value.trim();
+    const errorEl = document.getElementById('login-error');
+
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+
+    if (error) {
+      errorEl.textContent = 'Erreur : ' + error.message;
+    } else {
+      errorEl.textContent = '';
+      console.log('Connexion réussie :', data);
+      window.location.href = 'index.html'; // ✅ Redirige vers la page d'accueil
+    }
+});
+</script>
+        </section>
+    </main>
 </body>
-</html> 
+</html>

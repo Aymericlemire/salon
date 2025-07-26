@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réservation | Danohys</title>
+  <link rel="stylesheet" href="design/style.css" />
+  <style>
+    nav a[href="reservation.html"] {
+      color: var(--main-green) !important;
+      font-weight: bold;
+    }
+    #planity-container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 2rem 1rem;
+      margin: 2.5rem auto;
+      max-width: 480px;
+    }
+    #planity-container, #planity-container * {
+      color: #222 !important;
+      opacity: 1 !important;
+      font-family: 'Segoe UI', Arial, sans-serif !important;
+      text-shadow: none !important;
+      text-decoration: none !important;
+      background: transparent !important;
+    }
+    body::before {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER DANOHYS STYLE WIX -->
+  <header>
+    <div class="header-encadre">
+      <div>
+        <div class="salon-title">DANOHYS</div>
+        <div class="subtitle">ARTISAN COIFFEUR/BARBIER</div>
+        <div class="header-phone">06 58 88 83 19</div>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <ul>
+        <li><a class="nav-link" href="index.html">La maison</a></li>
+        <li><a class="nav-link" href="#">Blog</a></li>
+        <li><a class="nav-link" href="index.html#equipe">L'équipe</a></li>
+        <li><a class="nav-link" href="#">Instagram</a></li>
+        <li><a class="nav-link" href="information-concernant-les-tarifs.html">Tarifs/Services</a></li>
+        <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+        <li><a class="nav-link" href="login.html">Mon compte</a></li>
+      </ul>
+      <div class="burger" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <!-- FIN HEADER DANOHYS STYLE WIX -->
+
+  <!-- Main -->
+  <main>
+    <section id="reservation">
+      <h1>Réserver en ligne</h1>
+
+      <!-- Conteneur Planity -->
+      <div id="planity-container"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-socials">
+      <a href="http://www.facebook.com/danohys" target="_blank"><img src="./img/facebook.png" alt="Facebook Danohys" /></a>
+      <a href="https://instagram.com/danohys" target="_blank"><img src="./img/instagram.png" alt="Instagram Danohys" /></a>
+    </div>
+    <p>&copy; 2024 Danohys. Tous droits réservés.</p>
+    <p>Retour à l'<a href="index.html">accueil</a>.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./script/burger.js"></script>
+
+  <!-- Planity Widget Config -->
+  <script>
+    const container = document.getElementById('planity-container');
+    window.planity = {
+      key: '2107--MjDz0M6MZKt7XnATvNT',
+      primaryColor: '#222', // Couleur principale foncée pour plus de contraste
+      container: container,
+      appointmentContainer: container
+    };
+  </script>
+  <script src="https://d2skjte8udjqxw.cloudfront.net/widget/production/2/polyfills.latest.js"></script>
+  <script src="https://d2skjte8udjqxw.cloudfront.net/widget/production/2/app.latest.js"></script>
+</body>
+</html>
