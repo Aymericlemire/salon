@@ -667,12 +667,38 @@ footer a { color: var(--main-green); text-decoration: underline; }
   color: var(--main-dark);
 }
 
-/* Suppression des dégradés personnalisés pour Anaïs et Céline */
-.member.anais {
-  background: var(--main-grey);
+/* Style spécial pour Manon, Anaïs et Céline */
+.member.manon, .member.anais, .member.celine {
+  background: linear-gradient(135deg, #f8fafc 60%, #aabfa4 100%);
+  border: 2px solid var(--accent);
+  box-shadow: 0 6px 32px rgba(122,191,164,0.13);
 }
-.member.celine {
-  background: var(--main-grey);
+.member.manon img, .member.anais img, .member.celine img {
+  width: 140px;
+  height: 140px;
+  border: 5px solid var(--accent);
+  box-shadow: 0 8px 32px rgba(122,191,164,0.18);
+}
+.member.manon h3, .member.anais h3, .member.celine h3 {
+  color: var(--accent);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.member.manon::before {
+  content: "★ Junior Star";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  padding: 0.3em 1em;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 8px rgba(122,191,164,0.18);
 }
 
 /* Avis carousel */
